@@ -1,0 +1,84 @@
+﻿<Window x:Class="RSSReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:RSSReader="clr-namespace:RSSReader"
+        Title="RSS Reader by Igor Vieira" Height="400" Width="525">
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition ></RowDefinition>
+        </Grid.RowDefinitions>
+
+        
+            <Grid Grid.Row="0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Content="Digite o url" Grid.Column="0" Grid.Row="0" Margin="300,0,0,0" ></Label>
+                <TextBox Margin="30" Grid.Column="0" Grid.Row="0" Text="{Binding Path= UrlToAdd}" ></TextBox>
+            <Button  Name="add_url" Content="Adicionar URL" Grid.Row="1" Click="add_url_Click" Margin="5" Height="30" Width="100"/>
+                <Label Margin="60,30,0,0" Grid.Row="0" Grid.Column="1" Content="Para deletar uma url selecione uma no combobox abaixo e depois clique em Deletar Url"> </Label>
+                <Button Name="del_url" Content="Deletar URL" Grid.Row="1" Grid.Column="1" Click="del_url_Click" Margin="5" Width="100" Height="30" ></Button>
+
+            </Grid>
+       
+        <StackPanel  Grid.Row="1" Width="auto">
+            <Label Content="Lista de Urls"></Label>
+            <ComboBox Name="Urls" ItemsSource="{Binding Path=Urlsss}"
+    SelectedItem ="{Binding Path=SelectedUrls}" Width="auto" Height="20" />
+
+        </StackPanel>
+        
+        <DataGrid Grid.Row="2" Margin="5"          
+                ItemsSource="{Binding Urls}" 
+                AutoGenerateColumns="False"
+                EnableColumnVirtualization="False"
+                EnableRowVirtualization ="True"
+                VerticalScrollBarVisibility="Auto"
+                  SelectedItem="{Binding Path=SelectedCustomer, Mode=TwoWay}">
+            <DataGrid.ItemContainerStyle>
+                <Style TargetType="DataGridRow">
+                    <EventSetter Event="MouseDoubleClick" Handler="Row_DoubleClick"/>
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+              <!--  <DataGridTextColumn Header="Index" Width="auto"  Binding="{Binding Path=Index, Mode=OneWay}"/>  -->
+                <DataGridTextColumn Header="Titulo" Width="auto"  Binding="{Binding Path=Title, Mode=OneWay}"/>
+                <DataGridTextColumn Header="Autor" Width="auto" Binding="{Binding Path=Author, Mode=OneWay}"/>
+                <DataGridTextColumn Header="Categoria" Width="auto" Binding="{Binding Path=Category, Mode=OneWay}"/>
+                <DataGridTextColumn Header="Data" Width="auto" Binding="{Binding Path=Date, Mode=OneWay}"/>
+                 <!--   <DataGridTextColumn Header="Url" Width="auto" Binding="{Binding Path=Url, Mode=OneWay}"/> -->
+                </DataGrid.Columns>
+            </DataGrid>
+        
+        
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Content="Descrição" Grid.Row="0" FontSize="36"  Margin="5" BorderThickness="3,0,0,0"></Label>
+                    <TextBlock Name="feel" Grid.Row="1" TextWrapping="Wrap" Text="{Binding DescriptionMessage}" ></TextBlock>
+                </Grid>
+
+
+            <WebBrowser Name="peel"  Grid.Column="1" Margin="5" RSSReader:WebBrowserUtility.BindableSource="{Binding Link}"/>
+
+            </Grid>
+    </Grid>
+</Window>
