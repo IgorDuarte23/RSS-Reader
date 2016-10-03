@@ -1,2 +1,2 @@
 # RSS-Reader
-A simpley program that parse an RSS.
+A simple program that parse an RSS.
