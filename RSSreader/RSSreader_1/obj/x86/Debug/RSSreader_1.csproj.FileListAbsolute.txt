@@ -1,0 +1,13 @@
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\bin\Debug\RSSreader_1.exe
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\bin\Debug\RSSreader_1.pdb
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\MainWindow.g.cs
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\App.g.cs
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1_MarkupCompile.cache
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1_MarkupCompile.lref
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\MainWindow.baml
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1.g.resources
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1.Properties.Resources.resources
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1.csproj.GenerateResource.Cache
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1.exe
+C:\Users\igor_\Desktop\RSSreader_1\RSSreader_1\obj\x86\Debug\RSSreader_1.pdb
